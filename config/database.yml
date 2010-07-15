@@ -36,13 +36,3 @@ test:
   username: root
   password: Vermelho90
 
-production:
-  adapter: mysql
-  host: mysql01.vaiterjogo.com.br
-  encoding: utf8
-  reconnect: false
-  database: vaiterjogo
-  pool: 5
-  username: vaiterjogo
-  password: Vermelho90
-
