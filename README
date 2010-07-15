@@ -1,0 +1,203 @@
+http://www.vaiterjogo.com.br
+Site para admistracao de equipes de futebol amador e agendamento de jogos.
+
+**************************************************
+********************************* Colaboradores
+**************************************************
+CL1 - jeanmdias@gmail.com
+CL2 - gguerragui@gmail.com
+CL3 - colangelo.ti@gmail.com
+**************************************************
+****************************************** Layout
+ **************************************************
+LY1 - Layout nas páginas internas de Equipes e Escolas pode ser semelhante a sites de midias sociais (orkut/facebook) qualquer um está familiarizado com este modelo, facilita a integração (Usuário x Sistema)
+
+LY2 - Há um estudo feito por Jakob Nielsen ( no Prioritizing Web Usability) onde revelou que apenas 23% dos visitantes rolam a página em sua primeira visita ao site. Isto significa que 77% dos visitantes não irá rolar a página para visualizar o resto de seu conteúdo.
+
+LY3 - Fonte ExpressWay Free http://www.fontspring.com/fonts/typodermic/expressway
+
+LY4 - Chamada de marketing: "Entre em campo conosco! Anuncie aqui!"
+
+
+**************************************************
+*************************************** Perfis PF
+**************************************************
+PF1 - Administrador
+acesso a area restrita do site, privilegio total na aplicacao (owner)
+
+PF2 - Promoter
+cliente de banner
+acesso a uma pequena area destinada a ele, pode vizualizar o periodo/plano contratado, etc
+
+PF3 - Cliente
+responsavel por algum time
+
+PF4 - Jogador
+possui acesso semelhante ao (3)Cliente, porem com menos privilegios (pode ser um jogador de uma equipe ou de euma escola)
+
+PF5 - Usuario
+visitante
+
+PF6 - Olheiro
+possui permissao de consulta a base de jogadores do sistema
+
+**************************************************
+********************************* Entidades EN
+**************************************************
+
+Descricao: EN1 - Banner
+Regras de Negocio:
+RN1.1 - Devem ficar publicados por um determinado periodo contratado, e após devem ser expirados
+
+
+Descricao: EN7 - Clube
+Regras de Negocio:
+RN7.1 - Esta entidade é a origem da cobrança;
+RN7.2 - Origem das equipes (1-N);
+
+--
+
+Descricao: EN2 - Escola
+Regras de Negocio:
+RN2.1 - Uma escola deve estar relacionada a um Esporte (EN5)
+RN2.2 - Uma escola pode possuir várias Equipes (EN3)
+
+--
+
+Descricao: EN3 - Equipe
+Regras de Negocio:
+RN3.1 - Uma equipe deve estar relacionada a um Esporte (EN5)
+RN3.2 - Uma equipe pode estar relacionada a uma Escola (EN2)
+
+--
+
+Descricao: EN4 - Atleta
+Regras de Negocio:
+RN4.1 - Uma equipe deve estar relacionada a um Esporte (EN5)
+
+--
+
+Descricao: EN5 - Esporte (modalidade)
+Regras de Negocio:
+RN5.1 -
+
+--
+
+Descricao: EN6 - Jogo
+Regras de Negocio:
+RN6.1 - Pode envolver duas Equipes (EN3) ou dois Atletas (EN4) na modalida de tenis por exemplo
+
+**************************************************
+*********************************** Modulos MD
+**************************************************
+
+Titulo: MD1 - Marketing
+Descricao: Area para gerenciamento de banners (EN1) do site
+Prioridade: média
+Perfil de acesso: PF2
+Diretorio: mkt/
+Requisitos:
+RQ1.1 - Autenticacao de usuario (PF5) para acesso a area de Marketing
+RQ1.2 - Listagem de banners (EN1)
+RQ1.3 - Incluir/solicitar novo banner (EN1)
+RQ1.4 - Solicitar orcamento (nao precisa estar logado... nem ser cliente)
+
+
+--
+
+Titulo: MD2 - Equipes
+Descricao: Area para gerenciamento de equipes EN3
+Prioridade: alta
+Perfil de acesso: PF3, PF4
+Requisitos:
+RQ2.1 - Autenticacao de usuarios (PF3 3 PF4)
+RQ2.2 - Página Inicial, detalhamento ta Equipe (EN3)
+RQ2.3 - Listagem de Jogadores (EN4)
+RQ2.4 - Detalhamento de jogador (EN4)
+RQ2.5 - Edição de Equipe (EN3)
+RQ2.6 - Cadastro de Jogador (EN4)
+RQ2.7 - Edição de Jogador (EN4)
+RQ2.8 - Listagem de jogos (EN6)
+RQ2.9 - Cadastro de jogo (EN6)
+RQ2.10 - Edição de jogo (EN6)
+
+--
+
+Titulo: MD3 - Escolas
+Descricao: Area para gerenciamento de equipes de escolas
+Prioridade: alta
+Perfil de acesso: PF3, PF4
+Requisitos:
+RQ3.1 - Autenticacao de usuarios (PF3 3 PF4)
+RQ3.2 - Página Inicial, detalhamento ta Escola (EN2)
+RQ3.3 - Listagem de Equipes (EN4) da Escola (EN2)
+RQ3.3 - Listagem de Jogadores (EN4)
+RQ3.4 - Detalhamento de jogador (EN4)
+RQ3.5 - Edição de Equipe (EN3)
+RQ3.6 - Cadastro de Jogador (EN4)
+RQ3.7 - Edição de Jogador (EN4)
+RQ3.8 - Listagem de jogos (EN6)
+RQ3.9 - Cadastro de jogo (EN6)
+RQ3.10 - Edição de jogo (EN6)
+RQ3.11 - Edição de Escola (EN2)
+RQ3.11 - Cadastro de Equipe (EN3)
+
+--
+
+Titulo: MD4 - Agenda
+Descricao: Area para visualizacao de jogos
+Prioridade: alta
+Perfil de acesso: PF5 (todos)
+Requisitos:
+RQ4.1 - Visualizacao de jogos cadastrados
+RQ4.2 - Possibilidade de cadastrar jogos de variados esportes (wiki)
+
+--
+
+Titulo: MD5 - Site
+Descricao: Site institucional
+Prioridade: alta
+Perfil de acesso: PF5 (todos)
+Requisitos:
+RQ5.1 -
+RQ5.2 -
+
+--
+
+Titulo: MD6 - Olheiros
+Descricao: Area para consulta de atletas (EN4)
+Prioridade: média
+Perfil de acesso: PF6
+Requisitos:
+RQ6.1 -
+RQ6.2 -
+
+--
+
+Titulo: MD7 - Acesso Mobile
+Descricao: Consulta de jogos por telefone (mobile)
+Prioridade: baixa
+Perfil de acesso: PF5
+Requisitos:
+RQ7.1 - Consulta de jogos (EN6) por acesso mobile
+RQ7.2 - Cadastro de jogos (EN6) por acesso mobile
+
+
+--
+
+Titulo: MD8 - Integração com Twitter
+Descricao: desenvolver processo agendado para twittar jogos cadastrados
+Prioridade: baixa
+Perfil de acesso: PF5
+Requisitos:
+RQ8.1 - Twittar jogos cadastrados
+
+**************************************************
+****************************************** COBRANCA
+**************************************************
+Estudar a possibilidade de utilizarmos os serviços do site: https://pagseguro.uol.com.br/, para realização das transações financeira.
+
+Tarifas e Taxas
+
+Para Pagamentos à vista - boletos, transferências Online e transferências entre contas PagSeguro: entre (1,9 a 2,9%)* + R$ 0,40 por transação. Recebimento via cartão de crédito: entre (5,4% a 6,4%)* + R$...
+

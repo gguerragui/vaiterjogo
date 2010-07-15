@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <title>Vai ter Jogo</title>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    	<meta name="description" content="Descricao Vai ter Jogo">
+    	<meta name="keywords" content="futebol, tenis, jogos, equipes, atletas, campeonatos">
+	<meta name="author" content="Vai ter Jogo">
+
+	<!-- CSS -->
+	<%= stylesheet_link_tag "html-5-reset.css" %>
+	<%= stylesheet_link_tag "style.css" %>
+
+	<!--[if IE]>
+	<%= stylesheet_link_tag "style-ie.css" %>
+	<%= javascript_include_tag "html5-ie.js" %>
+	<![endif]-->
+
+	<!--[if lte IE 6]>
+	<%= javascript_include_tag "iepngfix_tilebg.js" %>
+	<![endif]-->
+
+	<!-- JQUERY -->
+	<%= javascript_include_tag "jquery", "application" %>
+	<%= javascript_include_tag "jquery.cluetip.min.js" %>
+
+</head>
+<body>
+<div id="content">
+
+	<!--[if lte IE 6]>
+    <div class="alert-ie6" style="padding: 5px; background: #900; font-size: 12px; color: #fff; position:absolute; height:14px; width:625px;">
+      <p style="margin:0; padding:0;"><strong>Opa ! </strong> Você está utilizando Internet Explorer 6. Atualize seu navegador <strong><a href="http://www.mozilla-europe.org/fr/firefox/" target="_blank" style="color: #fff;">Firefox</a>, <a href="http://www.google.com/chrome?hl=fr" target="_blank" style="color: #fff;">Chrome</a>, <a href="http://www.apple.com/fr/safari/download/" target="_blank" style="color: #fff;">Safari</a>, <a href="http://www.microsoft.com/france/windows/internet-explorer/telecharger-ie8.aspx" target="_blank" style="color: #fff;">Internet Explorer 8</a></strong></p>
+    </div>
+    <![endif]-->
+
+	<header role="banner">
+
+		<div class="space"></div>
+		<div class="search">
+			<form action="" method="post">
+				<input type="text" size="30" name="busca" value="pesquisar" class="txtB" />
+				<input type="image" src="images/search.gif" /> &nbsp;
+				<input type="image" src="images/twi.gif" /> &nbsp;
+				&nbsp;
+			</form>
+		</div>
+		<div class="space"></div>
+		<img src="images/bwin.gif" class="mkt">
+
+	</header>
+
+	<nav role="navigation">
+
+		<div id="menu">
+			<ul>
+				<li>
+					<label rel="includes/tip-bsq.inc">Basquete</label>
+				</li>
+				<li>
+					<label rel="includes/tip-bsb.inc">Baseball</label>
+				</li>
+				<li>
+					<label rel="includes/tip-ftb.inc">Futebol</label>
+				</li>
+				<li>
+					<label rel="includes/tip-ftb.inc">Futsal</label>
+				</li>
+				<li>
+					<label rel="includes/tip-hnd.inc">Handebol</label>
+				</li>
+				<li>
+					<label rel="includes/tip-vlb.inc">Pocker</label>
+				</li>
+				<li>
+					<label rel="includes/tip-rgb.inc">Rugby</label>
+				</li>
+				<li>
+					<label rel="includes/tip-tns.inc">Tenis</label>
+				</li>
+				<li>
+					<label rel="includes/tip-vlb.inc">Volei</label>
+				</li>
+			</ul>
+		</div>
+
+	</nav>
+
+	<section role="main">
+
+		<%= @content_for_layout %>
+
+	</section>
+
+	<!-- ROUNDIES -->
+	<script type="text/javascript" src="javascripts/roundies.js"></script>
+	<script type="text/javascript">
+		DD_roundies.addRule('div.search', '3px', true);
+		DD_roundies.addRule('div.alert-ie6', '3px', true);
+		DD_roundies.addRule('div.tip', '3px', true);
+		DD_roundies.addRule('div.grid', '3px', true);
+		DD_roundies.addRule('div.contentRight', '3px', true);
+	</script>
+
+	<!-- ANALYTICS -->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-16946606-1']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,145 @@
+html, body {height:100%;}
+
+a { outline:0; }
+
+body{
+	background-color: #FFF;
+	background-image: url("../images/bg.gif");
+	background-repeat: repeat-x;
+	font-family:Arial;
+}
+
+header{
+	display:block;
+	height:125px;
+	width:950px;
+	text-align: right;
+	background-image: url("../images/header.png");
+	background-repeat: no-repeat;
+}
+
+nav{
+	display:block;
+	height:30px;
+}
+
+section {
+	font: 8pt Arial;
+}
+
+#content{
+	min-height:100%;
+	position:relative;
+	width:950px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#contentLeft{
+	width:640px;
+	float: left;
+}
+
+#contentRight{
+	width:300px;
+	float: right;
+	background-color: #F0F0F0;
+}
+
+/* ------------------- GRID [inicio] ----------------- */
+
+#grid{
+	background-color: #F0F0F0; /*retirar */
+}
+
+#grid_filter{
+	width:180px;
+	float: left;
+}
+
+#grid_list{
+	width:460px;
+	float: right;
+}
+/* ------------------- GRID [fim] ----------------- */
+
+#signup {
+  bottom: 70px;
+  margin-left: 85px;
+  position: absolute;
+}
+
+#footer {
+	background-color: #548B54;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:50px;
+}
+
+/* ------------------- MARKETING [inicio] ----------------- */
+
+.mkt{
+	border:1px solid #FFF;
+}
+
+.pub{
+	border:1px solid #999;
+}
+
+.space{
+	height: 10px;
+}
+
+.search{
+	background-color: #FFF;
+	margin-left: 644px;
+	width: 305px;
+	height: 24px;
+}
+
+input.txtB{
+	-moz-border-radius:2px 2px 2px 2px;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #f0f0f0;
+	color:#999;
+	font: 8pt Arial;
+	margin-top:3px;
+	margin-bottom:3px;
+	padding:1px;
+}
+
+/* ------------------- MARKETING [fim] ----------------- */
+
+
+/* ------------------- NAVIGATION [inicio] ----------------- */
+
+#menu{
+	width:950px;
+	vertical-align: middle;
+	color: #f2f2f2;
+}
+
+#menu li {
+	position:relative;
+	display:block;
+	float:left;
+	width:48px;
+	height:30px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 2px;
+}
+
+#menu li label {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+/* ------------------- NAVIGATION [fim] ----------------- */
+
+.content {overflow:hidden;}
+.aside {width:200px;}
+.fleft {float:left;}
+.fright {float:right;}
+
