@@ -1,5 +1,9 @@
 html, body {height:100%;}
-
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   12px;
+  line-height: 18px;
+}
 a { outline:0; }
 
 body{
@@ -45,11 +49,13 @@ section {
 	float: right;
 	background-color: #F0F0F0;
 }
-
+#content_layout{
+}
 /* ------------------- GRID [inicio] ----------------- */
 
 #grid{
 	background-color: #F0F0F0; /*retirar */
+	padding: 15px;
 }
 
 #grid_filter{
@@ -65,12 +71,12 @@ section {
 
 #signup {
   bottom: 70px;
-  margin-left: 85px;
+  margin-left: 155px;
   position: absolute;
 }
 
 #footer {
-	background-color: #548B54;
+	background-color: white;
 	position:absolute;
 	bottom:0;
 	width:100%;
@@ -136,6 +142,9 @@ input.txtB{
 	font-weight: bold;
 }
 
+#user_nav{
+  position:absolute;
+}
 /* ------------------- NAVIGATION [fim] ----------------- */
 
 .content {overflow:hidden;}
