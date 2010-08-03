@@ -1,16 +1,8 @@
-html, body {height:100%;}
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   12px;
-  line-height: 18px;
-}
-a { outline:0; }
-
 body{
 	background-color: #FFF;
 	background-image: url("../images/bg.gif");
 	background-repeat: repeat-x;
-	font-family:Arial;
+	font-family: Trebuchet MS,Arial,Tahoma,Verdana,sans-serif;
 }
 
 header{
@@ -32,8 +24,6 @@ section {
 }
 
 #content{
-	min-height:100%;
-	position:relative;
 	width:950px;
 	margin-left:auto;
 	margin-right:auto;
@@ -47,15 +37,45 @@ section {
 #contentRight{
 	width:300px;
 	float: right;
-	background-color: #F0F0F0;
+	height: 150px;
 }
-#content_layout{
+
+/* ------------------- SLIDE [inicio] ----------------- */
+#slide{
+	/*background-color: #999;*/
+	height: 200px;
 }
+
+.jcarousel-control {
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+	text-align: right;
+	width:640px;
+}
+
+.jcarousel-control a {
+	font-size: 75%;
+	text-decoration: none;
+	padding: 0 5px;
+	margin: 0 0 5px 0;
+	border: 1px solid #fff;
+	color: #eee;
+	background-color: #222;
+	font-weight: bold;
+}
+
+.jcarousel-control a:focus,
+.jcarousel-control a:active {
+	outline: none;
+}
+
+/* ------------------- SLIDE [fim] ----------------- */
+
 /* ------------------- GRID [inicio] ----------------- */
 
 #grid{
-	background-color: #F0F0F0; /*retirar */
-	padding: 15px;
+	/* background-color: #F0F0F0; */
 }
 
 #grid_filter{
@@ -67,21 +87,9 @@ section {
 	width:460px;
 	float: right;
 }
+
 /* ------------------- GRID [fim] ----------------- */
 
-#signup {
-  bottom: 70px;
-  margin-left: 155px;
-  position: absolute;
-}
-
-#footer {
-	background-color: white;
-	position:absolute;
-	bottom:0;
-	width:100%;
-	height:50px;
-}
 
 /* ------------------- MARKETING [inicio] ----------------- */
 
@@ -99,8 +107,8 @@ section {
 
 .search{
 	background-color: #FFF;
-	margin-left: 644px;
-	width: 305px;
+	margin-left: 480px;
+	width: 470px;
 	height: 24px;
 }
 
@@ -115,6 +123,13 @@ input.txtB{
 	padding:1px;
 }
 
+.login{
+	color:#555;
+	font: 8pt Arial;
+	font-weight: bold;
+	text-decoration: none;
+}
+
 /* ------------------- MARKETING [fim] ----------------- */
 
 
@@ -123,7 +138,7 @@ input.txtB{
 #menu{
 	width:950px;
 	vertical-align: middle;
-	color: #f2f2f2;
+	
 }
 
 #menu li {
@@ -132,23 +147,21 @@ input.txtB{
 	float:left;
 	width:48px;
 	height:30px;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 25px; 
+	padding-right: 25px; 
 	padding-top: 2px;
 }
 
-#menu li label {
-	font-size: 8pt;
+#menu li label { 
+	font-size: 10px;
 	font-weight: bold;
 }
 
-#user_nav{
-  position:absolute;
+#menu li a { 
+	color: #f2f2f2;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
 }
+
 /* ------------------- NAVIGATION [fim] ----------------- */
-
-.content {overflow:hidden;}
-.aside {width:200px;}
-.fleft {float:left;}
-.fright {float:right;}
-

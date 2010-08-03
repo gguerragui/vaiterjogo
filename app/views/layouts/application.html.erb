@@ -4,8 +4,8 @@
     <title>Vai ter Jogo</title>
 
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    	<meta name="description" content="Descricao Vai ter Jogo">
-    	<meta name="keywords" content="futebol, tenis, jogos, equipes, atletas, campeonatos">
+    <meta name="description" content="Descricao Vai ter Jogo">
+    <meta name="keywords" content="futebol, tenis, jogos, equipes, atletas, campeonatos">
 	<meta name="author" content="Vai ter Jogo">
 
 	<!-- CSS -->
@@ -24,24 +24,16 @@
 	<!-- JQUERY -->
 	<%= javascript_include_tag "jquery", "application" %>
 	<%= javascript_include_tag "jquery.cluetip.min.js" %>
+	<%= javascript_include_tag "jquery.jcarousel.min.js" %>
 
 </head>
 <body>
-<div id="user_nav">
-<% if current_user %>
-  <%= link_to "Editar", edit_user_path(:current) %> |
-  <%= link_to "Logout", logout_path %> |
-  <span>Bem vindo <strong><%= current_user.username %></strong>!</span>
-<% else %>
-  <%= link_to "Login", login_path %>
-<% end %>
-</div>
 
 <div id="content">
 
 	<!--[if lte IE 6]>
     <div class="alert-ie6" style="padding: 5px; background: #900; font-size: 12px; color: #fff; position:absolute; height:14px; width:625px;">
-      <p style="margin:0; padding:0;"><strong>Opa ! </strong> Voc� est� utilizando Internet Explorer 6. Atualize seu navegador <strong><a href="http://www.mozilla-europe.org/fr/firefox/" target="_blank" style="color: #fff;">Firefox</a>, <a href="http://www.google.com/chrome?hl=fr" target="_blank" style="color: #fff;">Chrome</a>, <a href="http://www.apple.com/fr/safari/download/" target="_blank" style="color: #fff;">Safari</a>, <a href="http://www.microsoft.com/france/windows/internet-explorer/telecharger-ie8.aspx" target="_blank" style="color: #fff;">Internet Explorer 8</a></strong></p>
+      <p style="margin:0; padding:0;"><strong>Opa! </strong> Voce esta utilizando Internet Explorer 6. Atualize seu navegador <strong><a href="http://www.mozilla-europe.org/fr/firefox/" target="_blank" style="color: #fff;">Firefox</a>, <a href="http://www.google.com/chrome?hl=fr" target="_blank" style="color: #fff;">Chrome</a>, <a href="http://www.apple.com/fr/safari/download/" target="_blank" style="color: #fff;">Safari</a>, <a href="http://www.microsoft.com/france/windows/internet-explorer/telecharger-ie8.aspx" target="_blank" style="color: #fff;">Internet Explorer 8</a></strong></p>
     </div>
     <![endif]-->
 	<header role="banner">
@@ -49,7 +41,17 @@
 		<div class="space"></div>
 		<div class="search">
 			<form action="" method="post">
-				<input type="text" size="30" name="busca" value="pesquisar" class="txtB" />
+				<span class="login">
+				<% if current_user %>
+				  <%= link_to "Editar", edit_user_path(:current) %> |
+				  <%= link_to "Logout", logout_path %> |
+				  <span>Bem vindo <strong><%= current_user.username %></strong>!</span>
+				<% else %>
+				  <%= link_to "Login", login_path %>
+				<% end %>
+				</span>
+				<input type="image" src="images/login.png" id='login' /> &nbsp;
+				<input type="text" size="40" name="busca" value="pesquisar..." class="txtB" />
 				<input type="image" src="images/search.gif" /> &nbsp;
 				<input type="image" src="images/twi.gif" /> &nbsp;
 				&nbsp;
@@ -64,32 +66,32 @@
 
 		<div id="menu">
 			<ul>
-				<li>
-					<label rel="includes/tip-bsq.htm">Basquete</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-bsq.inc">BASQUETE</a>
 				</li>
-				<li>
-					<label rel="includes/tip-bsb.htm">Baseball</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-bsb.inc">BASEBALL</a>
 				</li>
-				<li>
-					<label rel="includes/tip-ftb.htm">Futebol</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-ftb.inc">FUTEBOL</a>
 				</li>
-				<li>
-					<label rel="includes/tip-ftb.htm">Futsal</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-ftb.inc">FUTSAL</a>
 				</li>
-				<li>
-					<label rel="includes/tip-hnd.htm">Handebol</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-hnd.inc">HANDEBOL</a>
 				</li>
-				<li>
-					<label rel="includes/tip-vlb.htm">Pocker</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-vlb.inc">POCKER</a>
 				</li>
-				<li>
-					<label rel="includes/tip-rgb.htm">Rugby</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-rgb.inc">RUGBY</a>
 				</li>
-				<li>
-					<label rel="includes/tip-tns.htm">Tenis</label>
-				</li>
-				<li>
-					<label rel="includes/tip-vlb.htm">Volei</label>
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-tns.inc">TENIS</a>
+				</li>				
+				<li class="sports">
+					<a href="javascript:void(0)" rel="includes/tip-vlb.inc">VOLEI</a>
 				</li>
 			</ul>
 		</div>

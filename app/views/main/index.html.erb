@@ -1,26 +1,41 @@
-<div id="contentLeft">
-
-	<div id="grid">
-
-		<div id="grid_filter">
-			filter
+		<div id="contentLeft">
+			
+			<div id="slide">
+				
+				<div class="jcarousel-control">
+					  <a href="#">1</a>
+					  <a href="#">2</a>
+					  <a href="#">3</a>
+				</div>
+				
+				<div id="mycarousel">
+					<ul>
+					  <li><img width="640" height="160" src="images/slide1.jpg" alt="" /></li>
+					  <li><img width="640" height="160" src="images/slide2.jpg" alt="" /></li>
+					  <li><img width="640" height="160" src="images/slide3.jpg" alt="" /></li>
+					</ul>
+				</div>			
+				
+			</div>
+			
+			<div id="grid">
+			
+				<div id="grid_filter">
+					filter
+				</div>
+			
+				<div id="grid_list">
+					grid
+				</div>
+				
+			</div>
+			
+			<div id="signup">
+				<%= link_to(image_tag("signup_banner.png"), new_user_path) %>
+			</div>
+			
 		</div>
-
-		<div id="grid_list">
-			grid
+		
+		<div id="contentRight">
+			right
 		</div>
-	</div>
-</div>
-
-<div id="contentRight">
-	right
-</div>
-
-<div id="signup">
-  <%= link_to(image_tag("signup_banner.png"), new_user_path) %>
-</div>
-
-<div id="footer">
-  rodape
-</div>
-
